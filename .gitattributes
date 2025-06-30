@@ -1,0 +1,5 @@
+# .gitattributes
+# Ignore C++ files for language statistics as this is a Flutter/Dart project
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.hpp linguist-vendored
