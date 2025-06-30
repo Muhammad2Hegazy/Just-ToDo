@@ -3,3 +3,16 @@
 *.cpp linguist-vendored
 *.h linguist-vendored
 *.hpp linguist-vendored
+
+# You can also explicitly include other files if they are being misidentified,
+# though for Flutter, .dart files are usually correctly identified by default.
+# For example, if you had a file named 'main' with no extension that was Dart:
+# main linguist-language=Dart
+
+# Or, to ignore common native build/config files that might contain C++ references
+# but aren't core application code:
+# ios/Podfile linguist-vendored
+# android/CMakeLists.txt linguist-vendored
+# android/build.gradle linguist-vendored
+# Note: Be careful with build files, as ignoring them might affect their display if they contain
+# actual code in a language you want to show (less common for these specific examples).
