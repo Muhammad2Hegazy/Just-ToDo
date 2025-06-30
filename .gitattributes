@@ -1,18 +1,21 @@
 # .gitattributes
-# Ignore C++ files for language statistics as this is a Flutter/Dart project
+# Ignore C++ and CMake files for language statistics as this is a Flutter/Dart project
+
+# Ignore C++ source and header files
 *.cpp linguist-vendored
 *.h linguist-vendored
 *.hpp linguist-vendored
+
+# Ignore CMake build system files
+CMakeLists.txt linguist-vendored
+*.cmake linguist-vendored
 
 # You can also explicitly include other files if they are being misidentified,
 # though for Flutter, .dart files are usually correctly identified by default.
 # For example, if you had a file named 'main' with no extension that was Dart:
 # main linguist-language=Dart
 
-# Or, to ignore common native build/config files that might contain C++ references
-# but aren't core application code:
-# ios/Podfile linguist-vendored
+# If specific native build files are detected as C++ or CMake and you want to hide them:
+# (Uncomment and adjust paths if these are causing issues for you)
 # android/CMakeLists.txt linguist-vendored
-# android/build.gradle linguist-vendored
-# Note: Be careful with build files, as ignoring them might affect their display if they contain
-# actual code in a language you want to show (less common for these specific examples).
+# ios/Classes/*.mm linguist-vendored # For Objective-C++ if it contributes to C++ count
